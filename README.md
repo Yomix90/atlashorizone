@@ -22,7 +22,7 @@ Site multilingue (FR, EN, ES, DE, AR en RTL) pour présenter des circuits au Mar
 3. [Installation locale](#3-installation-locale)
 4. [Administration (Strapi)](#4-administration-strapi)
 5. [Langues et traductions](#5-langues-et-traductions)
-6. [Déploiement Docker sur VPS](#6-déploiement-docker-sur-vps)
+6. [Déploiement Docker sur VPS](#6-déploiement-docker-sur-vps) · [avec Dokploy](#6-bis-déploiement-avec-dokploy)
 7. [Variante PM2 (sans Docker)](#7-variante-pm2-sans-docker)
 8. [Mises à jour](#8-mises-à-jour)
 9. [Sauvegardes et restauration](#9-sauvegardes-et-restauration)
@@ -246,6 +246,46 @@ Enfin, remplacez les valeurs d'exemple dans *Paramètres du site* et les pages j
 lié à 127.0.0.1 uniquement), Next.js (réseau interne), Nginx (HTTPS, HSTS, gzip, cache des fichiers
 statiques, limitation de débit des POST et de la connexion admin, `X-Real-IP` pour l'anti-spam),
 redirection `www` → domaine principal, `client_max_body_size` 30 Mo pour la médiathèque.
+
+## 6 bis. Déploiement avec Dokploy
+
+[Dokploy](https://dokploy.com) fournit Traefik : les domaines et le HTTPS Let's Encrypt se gèrent dans son
+interface. On utilise donc **`docker-compose.dokploy.yml`** (PostgreSQL + Strapi + Next.js, sans Nginx ni
+Certbot) au lieu de `docker-compose.yml`.
+
+1. **DNS** : deux enregistrements A vers l'IP du serveur Dokploy : `SITE_DOMAIN` (et `www` si souhaité)
+   et `CMS_DOMAIN` (ex. `cms.mon-agence.ma`).
+2. **Créer l'application** : *Project → Create Service → Compose*, type **Docker Compose**.
+   - *Provider* : GitHub, dépôt `Yomix90/atlashorizone`, branche `main`.
+   - *Compose Path* : `./docker-compose.dokploy.yml`.
+3. **Environment** : collez le contenu de [`deploy/dokploy/env.example`](deploy/dokploy/env.example) et
+   remplissez-le. Générez chaque secret avec `openssl rand -hex 32` (pour `APP_KEYS`, quatre valeurs séparées
+   par des virgules). Dokploy écrit ces valeurs dans un `.env` à côté du compose. Le fichier les transmet
+   explicitement à chaque service.
+4. **Domains** (onglet *Domains → Add Domain*) :
+
+   | Service | Host | Port | HTTPS |
+   |---|---|---|---|
+   | `frontend` | `SITE_DOMAIN` | 3000 | Let's Encrypt |
+   | `frontend` | `www.SITE_DOMAIN` (facultatif) | 3000 | Let's Encrypt |
+   | `strapi` | `CMS_DOMAIN` | 1337 | Let's Encrypt |
+
+5. **Deploy**. Au premier déploiement, le front est construit avant que Strapi n'existe. Dès que Strapi
+   répond, le conteneur Next.js invalide tout son cache ISR une fois (`frontend/docker-entrypoint.sh`), et
+   les pages se remplissent sans redéploiement. Aux déploiements suivants, le build lit directement les
+   contenus publiés via `https://CMS_DOMAIN`.
+6. Créez le premier administrateur sur `https://CMS_DOMAIN/admin`. Pour les contenus de démonstration,
+   ouvrez le terminal du service `strapi` dans Dokploy et lancez `npm run seed`.
+7. **Déploiement automatique** : activez *Autodeploy* (webhook GitHub) pour redéployer à chaque push sur `main`.
+8. **Sauvegardes** : les volumes nommés `pgdata` (base) et `uploads` (médias) sont compatibles avec les
+   **Volume Backups** de Dokploy (destination S3 à configurer dans *Settings → Destinations*). Pour un
+   dump SQL en plus, créez une tâche planifiée (*Schedules*) sur le service `postgres` :
+   `pg_dump -U $POSTGRES_USER -d $POSTGRES_DB --format=custom > /var/lib/postgresql/data/backup.dump`.
+
+Différences avec la pile Nginx :
+- HTTPS et redirections sont gérés par Traefik ; HSTS et CSP restent envoyés par Next.js et Strapi.
+- La limitation de débit des formulaires reste assurée par Next.js (IP lue dans `X-Real-IP`, fourni par Traefik).
+- Les ports ne sont pas publiés (`expose`) : seul Traefik, via `dokploy-network`, atteint les conteneurs.
 
 ## 7. Variante PM2 (sans Docker)
 

@@ -30,7 +30,8 @@ ENV NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL} \
     NEXT_TELEMETRY_DISABLED=1 \
     NODE_ENV=production
 
-# Le token Strapi est fourni comme secret BuildKit : il n'est jamais écrit dans une couche de l'image.
+# Le token Strapi est fourni comme secret BuildKit (facultatif : les contenus publiés sont aussi
+# lisibles sans token) ; il n'est jamais écrit dans une couche de l'image.
 RUN --mount=type=secret,id=strapi_api_token,env=STRAPI_API_TOKEN npm run build
 
 # ─── Image d'exécution ────────────────────────────────────
@@ -45,10 +46,12 @@ ENV NODE_ENV=production \
 RUN addgroup -S nextjs && adduser -S nextjs -G nextjs
 # .next/standalone contient déjà .next/static et public (copiés par scripts/postbuild.mjs)
 COPY --from=build --chown=nextjs:nextjs /app/.next/standalone ./
+COPY --from=build --chown=nextjs:nextjs --chmod=755 /app/docker-entrypoint.sh ./docker-entrypoint.sh
 
 USER nextjs
 EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=5 \
-  CMD wget -qO- http://127.0.0.1:3000/fr > /dev/null || exit 1
+  CMD wget -qO- http://127.0.0.1:3000/robots.txt > /dev/null || exit 1
 
-CMD ["node", "server.js"]
+# Lance server.js puis invalide le cache ISR dès que Strapi est joignable
+CMD ["./docker-entrypoint.sh"]

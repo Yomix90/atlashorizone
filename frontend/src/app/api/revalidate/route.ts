@@ -1,5 +1,5 @@
 import { timingSafeEqual } from 'node:crypto';
-import { revalidateTag } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import { NextResponse, type NextRequest } from 'next/server';
 import { CACHE_TAGS } from '@/lib/strapi';
 
@@ -23,12 +23,22 @@ export async function POST(request: NextRequest) {
   }
 
   let tags: string[] = [];
+  let all = false;
   try {
-    const body = (await request.json()) as { tags?: unknown };
+    const body = (await request.json()) as { tags?: unknown; all?: unknown };
+    all = body.all === true;
     if (Array.isArray(body.tags)) tags = body.tags.filter((t): t is string => typeof t === 'string' && ALLOWED_TAGS.has(t));
   } catch {
     return NextResponse.json({ revalidated: false, error: 'invalid_body' }, { status: 400 });
   }
+
+  // { "all": true } : tout le site (utilisé au démarrage du conteneur si le build n'a pas pu joindre Strapi)
+  if (all) {
+    for (const tag of ALLOWED_TAGS) revalidateTag(tag, 'max');
+    revalidatePath('/', 'layout');
+    return NextResponse.json({ revalidated: true, all: true, now: Date.now() });
+  }
+
   if (!tags.length) return NextResponse.json({ revalidated: false, error: 'no_valid_tags' }, { status: 400 });
 
   for (const tag of tags) revalidateTag(tag, 'max');
