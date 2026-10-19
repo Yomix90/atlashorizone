@@ -1,0 +1,122 @@
+# Généré au démarrage par l'image nginx (envsubst) : ${SITE_DOMAIN} et ${CMS_DOMAIN} viennent du .env.
+# Les variables Nginx ($host, $remote_addr…) ne sont pas touchées.
+
+server_tokens off;
+
+# ─── Limitation de débit ─────────────────────────────────
+# Formulaires (Server Actions = requêtes POST) : 20 / minute / IP, rafale de 10.
+map $request_method $form_limit_key {
+    POST    $binary_remote_addr;
+    default "";
+}
+limit_req_zone $form_limit_key zone=forms:10m rate=20r/m;
+# Connexion à l'administration Strapi : 10 / minute / IP.
+limit_req_zone $binary_remote_addr zone=cms_auth:10m rate=10r/m;
+limit_req_status 429;
+
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    ''      '';
+}
+
+# ─── Compression ─────────────────────────────────────────
+gzip on;
+gzip_vary on;
+gzip_comp_level 5;
+gzip_min_length 1024;
+gzip_proxied any;
+gzip_types text/plain text/css application/javascript application/json application/xml image/svg+xml application/manifest+json;
+
+upstream frontend_app {
+    server frontend:3000;
+    keepalive 32;
+}
+
+upstream strapi_app {
+    server strapi:1337;
+    keepalive 16;
+}
+
+# ─── HTTP : défi ACME + redirection HTTPS ────────────────
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ${SITE_DOMAIN} www.${SITE_DOMAIN} ${CMS_DOMAIN};
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# ─── www → domaine principal ─────────────────────────────
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name www.${SITE_DOMAIN};
+    include /etc/nginx/snippets/ssl.conf;
+    return 301 https://${SITE_DOMAIN}$request_uri;
+}
+
+# ─── Site public (Next.js) ───────────────────────────────
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name ${SITE_DOMAIN};
+
+    include /etc/nginx/snippets/ssl.conf;
+    include /etc/nginx/snippets/security-headers.conf;
+    client_max_body_size 1m;
+
+    # Fichiers statiques versionnés : cache navigateur 1 an
+    location /_next/static/ {
+        proxy_pass http://frontend_app;
+        include /etc/nginx/snippets/proxy.conf;
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "public, max-age=31536000, immutable" always;
+        access_log off;
+    }
+
+    location / {
+        limit_req zone=forms burst=10 nodelay;
+        proxy_pass http://frontend_app;
+        include /etc/nginx/snippets/proxy.conf;
+    }
+}
+
+# ─── Administration Strapi + médias ──────────────────────
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name ${CMS_DOMAIN};
+
+    include /etc/nginx/snippets/ssl.conf;
+    include /etc/nginx/snippets/security-headers.conf;
+    # Taille maximale des fichiers envoyés dans la médiathèque
+    client_max_body_size 30m;
+
+    location /uploads/ {
+        proxy_pass http://strapi_app;
+        include /etc/nginx/snippets/proxy.conf;
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "public, max-age=2592000" always;
+        access_log off;
+    }
+
+    location ~ ^/admin/(login|forgot-password|reset-password|register-admin) {
+        limit_req zone=cms_auth burst=5 nodelay;
+        proxy_pass http://strapi_app;
+        include /etc/nginx/snippets/proxy.conf;
+    }
+
+    location / {
+        proxy_pass http://strapi_app;
+        include /etc/nginx/snippets/proxy.conf;
+    }
+}

@@ -1,0 +1,160 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "Réservation",
+    "description": "Demandes de réservation (confirmées manuellement par l’agence)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reference": {
+      "type": "string",
+      "unique": true,
+      "maxLength": 32
+    },
+    "destination": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::destination.destination"
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "adults": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 50,
+      "default": 2
+    },
+    "children": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    "transport": {
+      "type": "boolean",
+      "default": false
+    },
+    "accommodation": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "standard",
+        "superior",
+        "luxury"
+      ],
+      "default": "none"
+    },
+    "privateGuide": {
+      "type": "boolean",
+      "default": false
+    },
+    "guideLanguage": {
+      "type": "enumeration",
+      "enum": [
+        "fr",
+        "en",
+        "es",
+        "de",
+        "ar"
+      ],
+      "default": "fr"
+    },
+    "totalPrice": {
+      "type": "decimal",
+      "min": 0
+    },
+    "currency": {
+      "type": "string",
+      "default": "EUR",
+      "maxLength": 3
+    },
+    "fullName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 120
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "country": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "customerLocale": {
+      "type": "enumeration",
+      "enum": [
+        "fr",
+        "en",
+        "es",
+        "de",
+        "ar"
+      ],
+      "default": "fr"
+    },
+    "message": {
+      "type": "text",
+      "maxLength": 3000
+    },
+    "termsAccepted": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "confirmed",
+        "cancelled"
+      ],
+      "default": "pending",
+      "required": true
+    },
+    "paymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "unpaid",
+        "pending",
+        "paid",
+        "refunded"
+      ],
+      "default": "unpaid"
+    },
+    "paymentProvider": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "cmi",
+        "paypal"
+      ],
+      "default": "none"
+    },
+    "paymentTransactionId": {
+      "type": "string",
+      "private": true
+    },
+    "internalNotes": {
+      "type": "text",
+      "private": true
+    }
+  }
+}

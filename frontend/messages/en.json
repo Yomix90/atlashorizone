@@ -1,0 +1,477 @@
+{
+  "meta": {
+    "defaultTitle": "{agency} | Tours and trips in Morocco",
+    "defaultDescription": "Private Morocco tours with local guides: desert, imperial cities, mountains and the Atlantic coast. Transparent prices and 24/7 support."
+  },
+  "common": {
+    "skipToContent": "Skip to main content",
+    "chooseLanguage": "Choose language",
+    "lastUpdated": "Last updated: {date}"
+  },
+  "nav": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "customTour": "Tailor-made tours",
+    "about": "About us",
+    "contact": "Contact",
+    "book": "Book now",
+    "faq": "FAQ",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "legal": "Legal notice",
+    "mainNav": "Main navigation",
+    "homeAria": "{agency} — back to home page",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "followUs": "Follow us",
+    "explore": "Explore",
+    "contact": "Contact",
+    "hours": "Opening hours",
+    "closed": "Closed",
+    "copyright": "© {year} {agency}. All rights reserved.",
+    "cookieSettings": "Cookie settings"
+  },
+  "whatsapp": {
+    "defaultMessage": "Hello, I would like some information about your tours in Morocco.",
+    "aria": "Message us on WhatsApp"
+  },
+  "cookies": {
+    "title": "Your privacy matters",
+    "text": "We use essential technical cookies and, with your consent, audience measurement cookies to improve the website.",
+    "learnMore": "Learn more",
+    "essentialOnly": "Essential only",
+    "acceptAll": "Accept all"
+  },
+  "labels": {
+    "tripTypes": {
+      "desert": "Desert",
+      "imperial_city": "Imperial city",
+      "beach": "Beach",
+      "mountain": "Mountain",
+      "culture": "Culture"
+    },
+    "regions": {
+      "tanger_tetouan_al_hoceima": "Tangier-Tetouan-Al Hoceima",
+      "oriental": "Oriental",
+      "fes_meknes": "Fes-Meknes",
+      "rabat_sale_kenitra": "Rabat-Sale-Kenitra",
+      "beni_mellal_khenifra": "Beni Mellal-Khenifra",
+      "casablanca_settat": "Casablanca-Settat",
+      "marrakech_safi": "Marrakech-Safi",
+      "draa_tafilalet": "Draa-Tafilalet",
+      "souss_massa": "Souss-Massa",
+      "guelmim_oued_noun": "Guelmim-Oued Noun",
+      "laayoune_sakia_el_hamra": "Laayoune-Sakia El Hamra",
+      "dakhla_oued_ed_dahab": "Dakhla-Oued Ed-Dahab"
+    },
+    "difficulty": {
+      "easy": "Easy",
+      "moderate": "Moderate",
+      "challenging": "Challenging"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Local agency · Private tours",
+      "title": "Morocco as you have never experienced it",
+      "subtitle": "Sahara dunes, ancient medinas, Atlas peaks and the Atlantic coast: private journeys designed by guides who know every path.",
+      "cta": "Discover our destinations",
+      "secondaryCta": "Design my tour"
+    },
+    "search": {
+      "aria": "Quick search",
+      "destination": "Destination",
+      "allDestinations": "All destinations",
+      "date": "Departure date",
+      "travellers": "Travellers",
+      "travellersCount": "{count, plural, one {# traveller} other {# travellers}}",
+      "submit": "Search"
+    },
+    "popular": {
+      "eyebrow": "Favourites",
+      "title": "Popular destinations",
+      "viewAll": "See all destinations"
+    },
+    "why": {
+      "eyebrow": "Why choose us",
+      "title": "Travel with peace of mind, with locals",
+      "subtitle": "We were born here. We share our favourite places, our culture and our hospitality.",
+      "items": {
+        "guides": {
+          "title": "Local guides",
+          "text": "Licensed guides and experienced drivers from the regions you visit."
+        },
+        "prices": {
+          "title": "Transparent prices",
+          "text": "A clear price calculated online, with no hidden fees or surprise commissions."
+        },
+        "support": {
+          "title": "24/7 support",
+          "text": "A team you can reach any time by phone or WhatsApp during your trip."
+        },
+        "custom": {
+          "title": "Tailor-made tours",
+          "text": "Every itinerary adapts to your pace, your wishes and your budget."
+        }
+      }
+    },
+    "reviews": {
+      "eyebrow": "They travelled with us",
+      "title": "What our travellers say"
+    },
+    "cta": {
+      "title": "Any questions? Let’s talk about your trip",
+      "subtitle": "Our team answers within minutes on WhatsApp, or within 24 hours by email.",
+      "whatsappMessage": "Hello, I would like to organise a trip to Morocco.",
+      "whatsapp": "Chat on WhatsApp",
+      "contact": "Contact us"
+    }
+  },
+  "reviews": {
+    "carouselAria": "Traveller reviews",
+    "ratingAria": "Rating: {rating} out of 5",
+    "previous": "Previous reviews",
+    "next": "Next reviews"
+  },
+  "destinations": {
+    "metaTitle": "Destinations and tours in Morocco",
+    "metaDescription": "Marrakech, Fes, Chefchaouen, Merzouga desert, Atlas, Essaouira… Compare our private tours and book online.",
+    "eyebrow": "Our tours",
+    "title": "Destinations in Morocco",
+    "subtitle": "Filter by region, type of trip, duration or budget and find the tour that suits you.",
+    "results": "{count, plural, =0 {No tours found} one {# tour found} other {# tours found}}",
+    "empty": {
+      "title": "No matching tours",
+      "text": "Try widening your criteria, or let us design an itinerary just for you.",
+      "reset": "Reset filters",
+      "custom": "Request a tailor-made tour"
+    },
+    "pagination": {
+      "aria": "Pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "status": "Page {page} of {total}"
+    },
+    "filters": {
+      "aria": "Filter destinations",
+      "title": "Filters",
+      "reset": "Reset",
+      "search": "Search a destination",
+      "searchPlaceholder": "Search: Sahara, medina, surf…",
+      "region": "Region",
+      "type": "Type of trip",
+      "duration": "Duration",
+      "budget": "Budget per adult",
+      "sort": "Sort by",
+      "all": "All",
+      "durations": {
+        "1": "1 day",
+        "2-3": "2 to 3 days",
+        "4+": "4 days or more"
+      },
+      "budgets": {
+        "lt150": "Under €150",
+        "150-250": "€150 to €250",
+        "gt250": "Over €250"
+      },
+      "sorts": {
+        "popularity": "Popularity",
+        "price_asc": "Price: low to high",
+        "price_desc": "Price: high to low",
+        "rating": "Best rated",
+        "duration": "Duration"
+      }
+    }
+  },
+  "destination": {
+    "days": "{count, plural, one {# day} other {# days}}",
+    "ratingAria": "Average rating {rating} out of 5 ({count, plural, one {# review} other {# reviews}})",
+    "reviewsCount": "{rating}/5 · {count, plural, one {# review} other {# reviews}}",
+    "from": "From",
+    "perPerson": "per person",
+    "perAdult": "per adult",
+    "childPrice": "Child (under 12): {price}",
+    "details": "Details",
+    "detailsAria": "See details: {title}",
+    "book": "Book now",
+    "bookAria": "Book: {title}",
+    "breadcrumbAria": "Breadcrumb",
+    "breadcrumbHome": "Home",
+    "breadcrumbDestinations": "Destinations",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hello, I am interested in the “{title}” tour.",
+    "askQuestion": "Ask a question",
+    "pricesAria": "Prices and booking",
+    "facts": {
+      "duration": "Duration",
+      "difficulty": "Level",
+      "bestPeriod": "Best time",
+      "region": "Region"
+    },
+    "sections": {
+      "about": "The tour",
+      "highlights": "Highlights",
+      "itinerary": "Day-by-day itinerary",
+      "includedExcluded": "Included and not included",
+      "included": "Included",
+      "excluded": "Not included",
+      "bestPeriod": "When to go?",
+      "map": "On the map",
+      "booking": "Book this tour",
+      "reviews": "Traveller reviews",
+      "similar": "You may also like"
+    },
+    "day": "Day {day}",
+    "recommended": "recommended",
+    "notRecommended": "less favourable",
+    "noReviews": "No reviews yet. Be the first to share your experience!",
+    "perks": {
+      "free": "Free, no-obligation request",
+      "private": "100% private tour",
+      "support": "24/7 support during the trip"
+    }
+  },
+  "gallery": {
+    "imageAlt": "{title} — photo {index}",
+    "open": "Enlarge photo {index} of {total}",
+    "viewAll": "See all {count} photos",
+    "dialogAria": "Photo gallery: {title}",
+    "counter": "{index} / {total}",
+    "close": "Close gallery",
+    "previous": "Previous photo",
+    "next": "Next photo"
+  },
+  "map": {
+    "caption": "Map: {place}",
+    "open": "Open in OpenStreetMap"
+  },
+  "errors": {
+    "required": "This field is required.",
+    "invalid": "Invalid value.",
+    "invalid_email": "Invalid email address.",
+    "invalid_phone": "Invalid phone number (e.g. +44 7700 900123).",
+    "invalid_date": "Invalid date.",
+    "date_too_soon": "Please choose a date from tomorrow onwards.",
+    "date_too_far": "Bookings are open up to two years in advance.",
+    "min_adults": "At least one adult is required.",
+    "max_travellers": "For more than 30 travellers, please contact us directly.",
+    "too_short": "Text is too short.",
+    "too_long": "Text is too long.",
+    "terms_required": "You must accept the terms and conditions.",
+    "choose_one": "Please select at least one option.",
+    "not_found": "This tour is no longer available."
+  },
+  "forms": {
+    "optional": "optional",
+    "honeypot": "Do not fill in this field",
+    "back": "Back",
+    "next": "Continue",
+    "sending": "Sending…",
+    "alerts": {
+      "validation": "Some fields are incorrect. Please check them.",
+      "rate_limited": "Too many requests. Please try again in a few minutes.",
+      "captcha": "The anti-bot check failed. Please try again.",
+      "server": "Something went wrong. Please try again or contact us on WhatsApp."
+    }
+  },
+  "booking": {
+    "metaTitle": "Book a tour",
+    "metaDescription": "Free, no-obligation booking request: choose your tour, dates and options. Reply within 24 hours.",
+    "eyebrow": "Booking",
+    "title": "Book your trip",
+    "subtitle": "Free, no-obligation request: our team confirms availability within 24 hours.",
+    "stepsAria": "Booking steps",
+    "stepCounter": "Step {step} of {total}",
+    "steps": {
+      "trip": "Your trip",
+      "options": "Options",
+      "contact": "Your details",
+      "confirm": "Confirmation"
+    },
+    "fields": {
+      "destination": "Tour",
+      "destinationPlaceholder": "Choose a tour",
+      "daysShort": "{count, plural, one {# day} other {# days}}",
+      "startDate": "Departure date",
+      "durationHint": "Tour length: {count, plural, one {# day} other {# days}}",
+      "adults": "Adults",
+      "children": "Children (under 12)",
+      "adultsDecrease": "Remove an adult",
+      "adultsIncrease": "Add an adult",
+      "childrenDecrease": "Remove a child",
+      "childrenIncrease": "Add a child",
+      "transport": "Private transport",
+      "transportHint": "Air-conditioned vehicle with driver — {price} per traveller",
+      "accommodation": "Accommodation",
+      "privateGuide": "Private guide",
+      "privateGuideHint": "Dedicated licensed guide — {price} per day",
+      "guideLanguage": "Guide language",
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "phoneHint": "With country code, preferably WhatsApp.",
+      "country": "Country of residence",
+      "countryPlaceholder": "Select your country",
+      "message": "Message",
+      "messagePlaceholder": "Dietary requirements, special occasion, questions…",
+      "terms": "I accept the <terms>terms and conditions</terms> and the <privacy>privacy policy</privacy>."
+    },
+    "accommodation": {
+      "none": "No accommodation",
+      "standard": "Standard",
+      "superior": "Superior",
+      "luxury": "Luxury",
+      "noneHint": "I will book it myself",
+      "perNight": "{price} / night / adult"
+    },
+    "summary": {
+      "reference": "Reference",
+      "destination": "Tour",
+      "dates": "Dates",
+      "dateRange": "from {start} to {end}",
+      "startDate": "Departure",
+      "travellers": "Travellers",
+      "travellersValue": "{adults, plural, one {# adult} other {# adults}}{children, plural, =0 {} one {, # child} other {, # children}}",
+      "total": "Estimated total price",
+      "contact": "Contact"
+    },
+    "submit": "Send my request",
+    "priceAria": "Price estimate",
+    "price": {
+      "title": "Your estimate",
+      "base": "Tour ({adults, plural, one {# adult} other {# adults}}{children, plural, =0 {} one {, # child} other {, # children}})",
+      "transport": "Private transport",
+      "accommodation": "Accommodation ({nights, plural, one {# night} other {# nights}})",
+      "guide": "Private guide",
+      "total": "Estimated total",
+      "note": "Indicative price confirmed by the agency. No payment is required now.",
+      "empty": "Choose a tour to see the price."
+    },
+    "success": {
+      "title": "Request sent!",
+      "text": "Thank you! A summary email has been sent to {email}. Our team will contact you within 24 hours to confirm your trip.",
+      "note": "Please keep your reference for any exchange with our team.",
+      "whatsappMessage": "Hello, I have just sent booking request {reference}.",
+      "whatsapp": "Follow up on WhatsApp",
+      "continue": "See more tours"
+    }
+  },
+  "contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contact our agency by phone, WhatsApp or email. Reply within 24 hours.",
+    "eyebrow": "Contact",
+    "title": "Let’s talk about your trip",
+    "subtitle": "A question, a project, a special request? We reply within 24 hours.",
+    "formTitle": "Contact form",
+    "infoAria": "Agency contact details",
+    "call": "Call us",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hello, I have a question about a trip to Morocco.",
+    "email": "Email",
+    "address": "Our agency",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Your message",
+      "submit": "Send message",
+      "privacy": "Your data is only used to answer your request. It is never sold.",
+      "successTitle": "Message sent!",
+      "successText": "Thank you for writing to us. A confirmation has just been sent to you by email.",
+      "another": "Send another message"
+    }
+  },
+  "customTour": {
+    "metaTitle": "Tailor-made tours in Morocco",
+    "metaDescription": "Describe your ideal trip: dates, budget, interests. A local advisor sends you a personalised itinerary within 48 hours.",
+    "eyebrow": "Tailor-made",
+    "title": "Your Morocco, designed just for you",
+    "subtitle": "Share your wishes: we create a private itinerary that suits your pace and budget.",
+    "stepLabel": "Step {step}",
+    "steps": {
+      "share": {
+        "title": "Tell us everything",
+        "text": "Dates, travellers, budget and interests."
+      },
+      "design": {
+        "title": "We design the itinerary",
+        "text": "An advisor sends you a proposal within 48 hours."
+      },
+      "enjoy": {
+        "title": "You enjoy",
+        "text": "We fine-tune it together until it is perfect."
+      }
+    },
+    "form": {
+      "tripSection": "Your project",
+      "startDate": "Preferred departure date",
+      "startDateHint": "Leave empty if your dates are flexible.",
+      "duration": "Duration (days)",
+      "adults": "Adults",
+      "children": "Children",
+      "budget": "Budget per person ({currency})",
+      "budgets": {
+        "lt1000": "Under 1,000",
+        "1000-2000": "1,000 to 2,000",
+        "2000-4000": "2,000 to 4,000",
+        "gt4000": "Over 4,000"
+      },
+      "accommodation": "Preferred accommodation",
+      "accommodations": {
+        "standard": "Standard (riads and boutique hotels)",
+        "superior": "Superior (4 stars)",
+        "luxury": "Luxury (5 stars, palaces)"
+      },
+      "interests": "Your interests",
+      "interestOptions": {
+        "desert": "Desert",
+        "imperial_city": "Imperial cities",
+        "beach": "Beaches",
+        "mountain": "Mountains",
+        "culture": "Culture and heritage",
+        "gastronomy": "Food",
+        "trekking": "Hiking",
+        "wellness": "Wellness and hammam"
+      },
+      "contactSection": "Your details",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Describe your ideal trip",
+      "messagePlaceholder": "What you dream of, your constraints, the occasion…",
+      "submit": "Get my proposal",
+      "successTitle": "Request received!",
+      "successText": "Thank you! An advisor is preparing your itinerary and will contact you within 48 hours."
+    }
+  },
+  "faq": {
+    "metaTitle": "Frequently asked questions",
+    "metaDescription": "Booking, payment, visas, best time to travel, private tours: all the answers to prepare your trip to Morocco.",
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know before you go.",
+    "categories": {
+      "booking": "Booking",
+      "payment": "Payment and cancellation",
+      "travel": "Preparing your trip",
+      "onsite": "On site"
+    },
+    "moreTitle": "Can’t find your answer?",
+    "moreText": "Our team answers within minutes on WhatsApp or within 24 hours by email.",
+    "contactCta": "Contact us"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page got lost in the dunes… It may have been moved or no longer exists.",
+    "home": "Back to home page",
+    "destinations": "See destinations"
+  },
+  "errorPage": {
+    "title": "Something went wrong",
+    "text": "We could not display this page. Please try again in a moment.",
+    "retry": "Try again",
+    "home": "Back to home page"
+  }
+}

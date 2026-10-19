@@ -1,0 +1,477 @@
+{
+  "meta": {
+    "defaultTitle": "{agency} | Circuits et excursions au Maroc",
+    "defaultDescription": "Circuits privés au Maroc avec guides locaux : désert, villes impériales, montagnes et côte atlantique. Prix transparents et assistance 24/7."
+  },
+  "common": {
+    "skipToContent": "Aller au contenu principal",
+    "chooseLanguage": "Choisir la langue",
+    "lastUpdated": "Dernière mise à jour : {date}"
+  },
+  "nav": {
+    "home": "Accueil",
+    "destinations": "Destinations",
+    "customTour": "Circuits sur mesure",
+    "about": "À propos",
+    "contact": "Contact",
+    "book": "Réserver",
+    "faq": "FAQ",
+    "terms": "CGV",
+    "privacy": "Confidentialité",
+    "legal": "Mentions légales",
+    "mainNav": "Navigation principale",
+    "homeAria": "{agency} — retour à l’accueil",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "footer": {
+    "followUs": "Suivez-nous",
+    "explore": "Explorer",
+    "contact": "Contact",
+    "hours": "Horaires",
+    "closed": "Fermé",
+    "copyright": "© {year} {agency}. Tous droits réservés.",
+    "cookieSettings": "Gérer les cookies"
+  },
+  "whatsapp": {
+    "defaultMessage": "Bonjour, je souhaite des informations sur vos circuits au Maroc.",
+    "aria": "Nous écrire sur WhatsApp"
+  },
+  "cookies": {
+    "title": "Votre vie privée compte",
+    "text": "Nous utilisons des cookies techniques indispensables et, avec votre accord, des cookies de mesure d’audience pour améliorer le site.",
+    "learnMore": "En savoir plus",
+    "essentialOnly": "Essentiels uniquement",
+    "acceptAll": "Tout accepter"
+  },
+  "labels": {
+    "tripTypes": {
+      "desert": "Désert",
+      "imperial_city": "Ville impériale",
+      "beach": "Plage",
+      "mountain": "Montagne",
+      "culture": "Culture"
+    },
+    "regions": {
+      "tanger_tetouan_al_hoceima": "Tanger-Tétouan-Al Hoceïma",
+      "oriental": "Oriental",
+      "fes_meknes": "Fès-Meknès",
+      "rabat_sale_kenitra": "Rabat-Salé-Kénitra",
+      "beni_mellal_khenifra": "Béni Mellal-Khénifra",
+      "casablanca_settat": "Casablanca-Settat",
+      "marrakech_safi": "Marrakech-Safi",
+      "draa_tafilalet": "Drâa-Tafilalet",
+      "souss_massa": "Souss-Massa",
+      "guelmim_oued_noun": "Guelmim-Oued Noun",
+      "laayoune_sakia_el_hamra": "Laâyoune-Sakia El Hamra",
+      "dakhla_oued_ed_dahab": "Dakhla-Oued Ed-Dahab"
+    },
+    "difficulty": {
+      "easy": "Facile",
+      "moderate": "Modérée",
+      "challenging": "Sportive"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Agence locale · Circuits privés",
+      "title": "Le Maroc comme vous ne l’avez jamais vécu",
+      "subtitle": "Dunes du Sahara, médinas millénaires, sommets de l’Atlas et côte atlantique : des voyages privés imaginés par des guides qui connaissent chaque chemin.",
+      "cta": "Découvrir nos destinations",
+      "secondaryCta": "Créer mon circuit"
+    },
+    "search": {
+      "aria": "Recherche rapide",
+      "destination": "Destination",
+      "allDestinations": "Toutes les destinations",
+      "date": "Date de départ",
+      "travellers": "Voyageurs",
+      "travellersCount": "{count, plural, one {# voyageur} other {# voyageurs}}",
+      "submit": "Rechercher"
+    },
+    "popular": {
+      "eyebrow": "Coups de cœur",
+      "title": "Destinations populaires",
+      "viewAll": "Voir toutes les destinations"
+    },
+    "why": {
+      "eyebrow": "Pourquoi nous choisir",
+      "title": "Voyager sereinement, avec des locaux",
+      "subtitle": "Nous sommes nés ici. Nous partageons nos adresses, notre culture et notre hospitalité.",
+      "items": {
+        "guides": {
+          "title": "Guides locaux",
+          "text": "Des guides officiels et chauffeurs expérimentés, originaires des régions visitées."
+        },
+        "prices": {
+          "title": "Prix transparents",
+          "text": "Un tarif clair calculé en ligne, sans frais cachés ni commission surprise."
+        },
+        "support": {
+          "title": "Assistance 24/7",
+          "text": "Une équipe joignable à toute heure par téléphone ou WhatsApp pendant votre voyage."
+        },
+        "custom": {
+          "title": "Circuits sur mesure",
+          "text": "Chaque itinéraire s’adapte à votre rythme, vos envies et votre budget."
+        }
+      }
+    },
+    "reviews": {
+      "eyebrow": "Ils ont voyagé avec nous",
+      "title": "Ce que disent nos voyageurs"
+    },
+    "cta": {
+      "title": "Une question ? Parlons de votre voyage",
+      "subtitle": "Notre équipe vous répond en quelques minutes sur WhatsApp, ou sous 24 heures par email.",
+      "whatsappMessage": "Bonjour, j’aimerais organiser un voyage au Maroc.",
+      "whatsapp": "Écrire sur WhatsApp",
+      "contact": "Nous contacter"
+    }
+  },
+  "reviews": {
+    "carouselAria": "Avis de voyageurs",
+    "ratingAria": "Note : {rating} sur 5",
+    "previous": "Avis précédents",
+    "next": "Avis suivants"
+  },
+  "destinations": {
+    "metaTitle": "Destinations et circuits au Maroc",
+    "metaDescription": "Marrakech, Fès, Chefchaouen, désert de Merzouga, Atlas, Essaouira… Comparez nos circuits privés et réservez en ligne.",
+    "eyebrow": "Nos circuits",
+    "title": "Destinations au Maroc",
+    "subtitle": "Filtrez par région, type de voyage, durée ou budget et trouvez le circuit qui vous ressemble.",
+    "results": "{count, plural, =0 {Aucun circuit trouvé} one {# circuit trouvé} other {# circuits trouvés}}",
+    "empty": {
+      "title": "Aucun circuit ne correspond",
+      "text": "Essayez d’élargir vos critères, ou laissez-nous créer un itinéraire rien que pour vous.",
+      "reset": "Réinitialiser les filtres",
+      "custom": "Demander un circuit sur mesure"
+    },
+    "pagination": {
+      "aria": "Pagination",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "status": "Page {page} sur {total}"
+    },
+    "filters": {
+      "aria": "Filtrer les destinations",
+      "title": "Filtres",
+      "reset": "Réinitialiser",
+      "search": "Rechercher une destination",
+      "searchPlaceholder": "Rechercher : Sahara, médina, surf…",
+      "region": "Région",
+      "type": "Type de voyage",
+      "duration": "Durée",
+      "budget": "Budget par adulte",
+      "sort": "Trier par",
+      "all": "Tous",
+      "durations": {
+        "1": "1 jour",
+        "2-3": "2 à 3 jours",
+        "4+": "4 jours et plus"
+      },
+      "budgets": {
+        "lt150": "Moins de 150 €",
+        "150-250": "De 150 à 250 €",
+        "gt250": "Plus de 250 €"
+      },
+      "sorts": {
+        "popularity": "Popularité",
+        "price_asc": "Prix croissant",
+        "price_desc": "Prix décroissant",
+        "rating": "Meilleures notes",
+        "duration": "Durée"
+      }
+    }
+  },
+  "destination": {
+    "days": "{count, plural, one {# jour} other {# jours}}",
+    "ratingAria": "Note moyenne {rating} sur 5 ({count, plural, one {# avis} other {# avis}})",
+    "reviewsCount": "{rating}/5 · {count, plural, one {# avis} other {# avis}}",
+    "from": "À partir de",
+    "perPerson": "par personne",
+    "perAdult": "par adulte",
+    "childPrice": "Enfant (moins de 12 ans) : {price}",
+    "details": "Détails",
+    "detailsAria": "Voir le détail : {title}",
+    "book": "Réserver",
+    "bookAria": "Réserver : {title}",
+    "breadcrumbAria": "Fil d’Ariane",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbDestinations": "Destinations",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Bonjour, je suis intéressé(e) par le circuit « {title} ».",
+    "askQuestion": "Poser une question",
+    "pricesAria": "Tarifs et réservation",
+    "facts": {
+      "duration": "Durée",
+      "difficulty": "Niveau",
+      "bestPeriod": "Meilleure période",
+      "region": "Région"
+    },
+    "sections": {
+      "about": "Le circuit",
+      "highlights": "Points forts",
+      "itinerary": "Programme jour par jour",
+      "includedExcluded": "Inclus et non inclus",
+      "included": "Inclus",
+      "excluded": "Non inclus",
+      "bestPeriod": "Quand partir ?",
+      "map": "Sur la carte",
+      "booking": "Réserver ce circuit",
+      "reviews": "Avis des voyageurs",
+      "similar": "Vous aimerez aussi"
+    },
+    "day": "Jour {day}",
+    "recommended": "recommandé",
+    "notRecommended": "moins favorable",
+    "noReviews": "Aucun avis pour le moment. Soyez le premier à partager votre expérience !",
+    "perks": {
+      "free": "Demande gratuite et sans engagement",
+      "private": "Circuit 100 % privé",
+      "support": "Assistance 24/7 pendant le voyage"
+    }
+  },
+  "gallery": {
+    "imageAlt": "{title} — photo {index}",
+    "open": "Agrandir la photo {index} sur {total}",
+    "viewAll": "Voir les {count} photos",
+    "dialogAria": "Galerie photos : {title}",
+    "counter": "{index} / {total}",
+    "close": "Fermer la galerie",
+    "previous": "Photo précédente",
+    "next": "Photo suivante"
+  },
+  "map": {
+    "caption": "Carte : {place}",
+    "open": "Ouvrir dans OpenStreetMap"
+  },
+  "errors": {
+    "required": "Ce champ est obligatoire.",
+    "invalid": "Valeur invalide.",
+    "invalid_email": "Adresse email invalide.",
+    "invalid_phone": "Numéro de téléphone invalide (ex. +33 6 12 34 56 78).",
+    "invalid_date": "Date invalide.",
+    "date_too_soon": "Choisissez une date à partir de demain.",
+    "date_too_far": "Les réservations sont ouvertes jusqu’à deux ans à l’avance.",
+    "min_adults": "Au moins un adulte est requis.",
+    "max_travellers": "Pour plus de 30 voyageurs, contactez-nous directement.",
+    "too_short": "Texte trop court.",
+    "too_long": "Texte trop long.",
+    "terms_required": "Vous devez accepter les conditions générales.",
+    "choose_one": "Sélectionnez au moins une option.",
+    "not_found": "Ce circuit n’est plus disponible."
+  },
+  "forms": {
+    "optional": "facultatif",
+    "honeypot": "Ne pas remplir ce champ",
+    "back": "Retour",
+    "next": "Continuer",
+    "sending": "Envoi en cours…",
+    "alerts": {
+      "validation": "Certains champs sont incorrects. Merci de les vérifier.",
+      "rate_limited": "Trop de demandes envoyées. Merci de réessayer dans quelques minutes.",
+      "captcha": "La vérification anti-robot a échoué. Merci de réessayer.",
+      "server": "Une erreur est survenue. Réessayez ou contactez-nous sur WhatsApp."
+    }
+  },
+  "booking": {
+    "metaTitle": "Réserver un circuit",
+    "metaDescription": "Demande de réservation gratuite et sans engagement : choisissez votre circuit, vos dates et vos options. Réponse sous 24 heures.",
+    "eyebrow": "Réservation",
+    "title": "Réservez votre voyage",
+    "subtitle": "Demande gratuite et sans engagement : notre équipe confirme la disponibilité sous 24 heures.",
+    "stepsAria": "Étapes de la réservation",
+    "stepCounter": "Étape {step} sur {total}",
+    "steps": {
+      "trip": "Votre voyage",
+      "options": "Options",
+      "contact": "Vos coordonnées",
+      "confirm": "Confirmation"
+    },
+    "fields": {
+      "destination": "Circuit",
+      "destinationPlaceholder": "Choisissez un circuit",
+      "daysShort": "{count, plural, one {# j} other {# j}}",
+      "startDate": "Date de départ",
+      "durationHint": "Durée du circuit : {count, plural, one {# jour} other {# jours}}",
+      "adults": "Adultes",
+      "children": "Enfants (– 12 ans)",
+      "adultsDecrease": "Retirer un adulte",
+      "adultsIncrease": "Ajouter un adulte",
+      "childrenDecrease": "Retirer un enfant",
+      "childrenIncrease": "Ajouter un enfant",
+      "transport": "Transport privé",
+      "transportHint": "Véhicule climatisé avec chauffeur — {price} par voyageur",
+      "accommodation": "Hébergement",
+      "privateGuide": "Guide privé",
+      "privateGuideHint": "Guide officiel dédié — {price} par jour",
+      "guideLanguage": "Langue du guide",
+      "fullName": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "phoneHint": "Avec l’indicatif pays, de préférence WhatsApp.",
+      "country": "Pays de résidence",
+      "countryPlaceholder": "Sélectionnez votre pays",
+      "message": "Message",
+      "messagePlaceholder": "Régime alimentaire, occasion spéciale, questions…",
+      "terms": "J’accepte les <terms>conditions générales de vente</terms> et la <privacy>politique de confidentialité</privacy>."
+    },
+    "accommodation": {
+      "none": "Sans hébergement",
+      "standard": "Standard",
+      "superior": "Supérieur",
+      "luxury": "Luxe",
+      "noneHint": "Je réserve moi-même",
+      "perNight": "{price} / nuit / adulte"
+    },
+    "summary": {
+      "reference": "Référence",
+      "destination": "Circuit",
+      "dates": "Dates",
+      "dateRange": "du {start} au {end}",
+      "startDate": "Départ",
+      "travellers": "Voyageurs",
+      "travellersValue": "{adults, plural, one {# adulte} other {# adultes}}{children, plural, =0 {} one {, # enfant} other {, # enfants}}",
+      "total": "Prix total estimé",
+      "contact": "Contact"
+    },
+    "submit": "Envoyer ma demande",
+    "priceAria": "Estimation du prix",
+    "price": {
+      "title": "Votre estimation",
+      "base": "Circuit ({adults, plural, one {# adulte} other {# adultes}}{children, plural, =0 {} one {, # enfant} other {, # enfants}})",
+      "transport": "Transport privé",
+      "accommodation": "Hébergement ({nights, plural, one {# nuit} other {# nuits}})",
+      "guide": "Guide privé",
+      "total": "Total estimé",
+      "note": "Prix indicatif confirmé par l’agence. Aucun paiement n’est demandé maintenant.",
+      "empty": "Choisissez un circuit pour voir le prix."
+    },
+    "success": {
+      "title": "Demande envoyée !",
+      "text": "Merci ! Un email récapitulatif a été envoyé à {email}. Notre équipe vous recontacte sous 24 heures pour confirmer votre voyage.",
+      "note": "Conservez votre référence pour tout échange avec notre équipe.",
+      "whatsappMessage": "Bonjour, je viens d’envoyer la demande de réservation {reference}.",
+      "whatsapp": "Suivre sur WhatsApp",
+      "continue": "Voir d’autres circuits"
+    }
+  },
+  "contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contactez notre agence par téléphone, WhatsApp ou email. Réponse sous 24 heures.",
+    "eyebrow": "Contact",
+    "title": "Parlons de votre voyage",
+    "subtitle": "Une question, un projet, une demande particulière ? Nous vous répondons sous 24 heures.",
+    "formTitle": "Formulaire de contact",
+    "infoAria": "Coordonnées de l’agence",
+    "call": "Appelez-nous",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Bonjour, j’ai une question concernant un voyage au Maroc.",
+    "email": "Email",
+    "address": "Notre agence",
+    "form": {
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "message": "Votre message",
+      "submit": "Envoyer le message",
+      "privacy": "Vos données servent uniquement à répondre à votre demande. Elles ne sont jamais revendues.",
+      "successTitle": "Message envoyé !",
+      "successText": "Merci de nous avoir écrit. Un accusé de réception vient de vous être envoyé par email.",
+      "another": "Envoyer un autre message"
+    }
+  },
+  "customTour": {
+    "metaTitle": "Circuits sur mesure au Maroc",
+    "metaDescription": "Décrivez votre voyage idéal : dates, budget, envies. Un conseiller local vous envoie un itinéraire personnalisé sous 48 heures.",
+    "eyebrow": "Sur mesure",
+    "title": "Votre Maroc, dessiné rien que pour vous",
+    "subtitle": "Partagez vos envies : nous composons un itinéraire privé, adapté à votre rythme et à votre budget.",
+    "stepLabel": "Étape {step}",
+    "steps": {
+      "share": {
+        "title": "Vous nous dites tout",
+        "text": "Dates, voyageurs, budget et centres d’intérêt."
+      },
+      "design": {
+        "title": "Nous créons l’itinéraire",
+        "text": "Un conseiller vous envoie une proposition sous 48 heures."
+      },
+      "enjoy": {
+        "title": "Vous profitez",
+        "text": "Nous ajustons ensemble jusqu’au voyage parfait."
+      }
+    },
+    "form": {
+      "tripSection": "Votre projet",
+      "startDate": "Date de départ souhaitée",
+      "startDateHint": "Laissez vide si vos dates sont flexibles.",
+      "duration": "Durée (jours)",
+      "adults": "Adultes",
+      "children": "Enfants",
+      "budget": "Budget par personne ({currency})",
+      "budgets": {
+        "lt1000": "Moins de 1 000",
+        "1000-2000": "1 000 à 2 000",
+        "2000-4000": "2 000 à 4 000",
+        "gt4000": "Plus de 4 000"
+      },
+      "accommodation": "Hébergement souhaité",
+      "accommodations": {
+        "standard": "Standard (riads et hôtels de charme)",
+        "superior": "Supérieur (4 étoiles)",
+        "luxury": "Luxe (5 étoiles, palaces)"
+      },
+      "interests": "Vos centres d’intérêt",
+      "interestOptions": {
+        "desert": "Désert",
+        "imperial_city": "Villes impériales",
+        "beach": "Plages",
+        "mountain": "Montagne",
+        "culture": "Culture et patrimoine",
+        "gastronomy": "Gastronomie",
+        "trekking": "Randonnée",
+        "wellness": "Bien-être et hammam"
+      },
+      "contactSection": "Vos coordonnées",
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "message": "Décrivez votre voyage idéal",
+      "messagePlaceholder": "Ce qui vous ferait rêver, vos contraintes, l’occasion du voyage…",
+      "submit": "Recevoir ma proposition",
+      "successTitle": "Demande reçue !",
+      "successText": "Merci ! Un conseiller prépare votre itinéraire et vous recontacte sous 48 heures."
+    }
+  },
+  "faq": {
+    "metaTitle": "Questions fréquentes",
+    "metaDescription": "Réservation, paiement, visa, meilleure période, circuits privés : toutes les réponses pour préparer votre voyage au Maroc.",
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce qu’il faut savoir avant de partir.",
+    "categories": {
+      "booking": "Réservation",
+      "payment": "Paiement et annulation",
+      "travel": "Préparer son voyage",
+      "onsite": "Sur place"
+    },
+    "moreTitle": "Vous ne trouvez pas votre réponse ?",
+    "moreText": "Notre équipe vous répond en quelques minutes sur WhatsApp ou sous 24 heures par email.",
+    "contactCta": "Nous contacter"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "Cette page s’est perdue dans les dunes… Elle a peut-être été déplacée ou n’existe plus.",
+    "home": "Retour à l’accueil",
+    "destinations": "Voir les destinations"
+  },
+  "errorPage": {
+    "title": "Une erreur est survenue",
+    "text": "Nous n’avons pas pu afficher cette page. Merci de réessayer dans un instant.",
+    "retry": "Réessayer",
+    "home": "Retour à l’accueil"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_social_links",
+  "info": {
+    "displayName": "Réseau social",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "youtube",
+        "x",
+        "tripadvisor",
+        "linkedin",
+        "pinterest"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

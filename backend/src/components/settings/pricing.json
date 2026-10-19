@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_settings_pricings",
+  "info": {
+    "displayName": "Tarifs des options",
+    "icon": "priceTag",
+    "description": "Tarifs utilisés pour le calcul automatique du prix total des réservations"
+  },
+  "options": {},
+  "attributes": {
+    "transportPerPerson": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "default": 60
+    },
+    "accommodationStandardPerNight": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "default": 35
+    },
+    "accommodationSuperiorPerNight": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "default": 70
+    },
+    "accommodationLuxuryPerNight": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "default": 140
+    },
+    "childAccommodationRatio": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "max": 1,
+      "default": 0.5
+    },
+    "privateGuidePerDay": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "default": 90
+    }
+  }
+}

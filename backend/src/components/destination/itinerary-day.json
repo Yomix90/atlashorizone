@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_destination_itinerary_days",
+  "info": {
+    "displayName": "Jour du programme",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "day": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "overnight": {
+      "type": "string"
+    },
+    "meals": {
+      "type": "string"
+    }
+  }
+}

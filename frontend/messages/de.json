@@ -1,0 +1,477 @@
+{
+  "meta": {
+    "defaultTitle": "{agency} | Rundreisen und Ausflüge in Marokko",
+    "defaultDescription": "Private Marokko-Rundreisen mit lokalen Guides: Wüste, Königsstädte, Berge und Atlantikküste. Transparente Preise und 24/7-Betreuung."
+  },
+  "common": {
+    "skipToContent": "Zum Hauptinhalt springen",
+    "chooseLanguage": "Sprache wählen",
+    "lastUpdated": "Zuletzt aktualisiert: {date}"
+  },
+  "nav": {
+    "home": "Startseite",
+    "destinations": "Reiseziele",
+    "customTour": "Individuelle Reisen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "book": "Buchen",
+    "faq": "FAQ",
+    "terms": "AGB",
+    "privacy": "Datenschutz",
+    "legal": "Impressum",
+    "mainNav": "Hauptnavigation",
+    "homeAria": "{agency} — zurück zur Startseite",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "footer": {
+    "followUs": "Folgen Sie uns",
+    "explore": "Entdecken",
+    "contact": "Kontakt",
+    "hours": "Öffnungszeiten",
+    "closed": "Geschlossen",
+    "copyright": "© {year} {agency}. Alle Rechte vorbehalten.",
+    "cookieSettings": "Cookie-Einstellungen"
+  },
+  "whatsapp": {
+    "defaultMessage": "Hallo, ich hätte gerne Informationen zu Ihren Rundreisen in Marokko.",
+    "aria": "Schreiben Sie uns auf WhatsApp"
+  },
+  "cookies": {
+    "title": "Ihre Privatsphäre ist uns wichtig",
+    "text": "Wir verwenden technisch notwendige Cookies und – mit Ihrer Einwilligung – Cookies zur Reichweitenmessung, um die Website zu verbessern.",
+    "learnMore": "Mehr erfahren",
+    "essentialOnly": "Nur notwendige",
+    "acceptAll": "Alle akzeptieren"
+  },
+  "labels": {
+    "tripTypes": {
+      "desert": "Wüste",
+      "imperial_city": "Königsstadt",
+      "beach": "Strand",
+      "mountain": "Berge",
+      "culture": "Kultur"
+    },
+    "regions": {
+      "tanger_tetouan_al_hoceima": "Tanger-Tétouan-Al Hoceïma",
+      "oriental": "Oriental",
+      "fes_meknes": "Fès-Meknès",
+      "rabat_sale_kenitra": "Rabat-Salé-Kénitra",
+      "beni_mellal_khenifra": "Béni Mellal-Khénifra",
+      "casablanca_settat": "Casablanca-Settat",
+      "marrakech_safi": "Marrakesch-Safi",
+      "draa_tafilalet": "Drâa-Tafilalet",
+      "souss_massa": "Souss-Massa",
+      "guelmim_oued_noun": "Guelmim-Oued Noun",
+      "laayoune_sakia_el_hamra": "Laâyoune-Sakia El Hamra",
+      "dakhla_oued_ed_dahab": "Dakhla-Oued Ed-Dahab"
+    },
+    "difficulty": {
+      "easy": "Leicht",
+      "moderate": "Mittel",
+      "challenging": "Anspruchsvoll"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Lokale Agentur · Private Rundreisen",
+      "title": "Marokko, wie Sie es noch nie erlebt haben",
+      "subtitle": "Saharadünen, jahrhundertealte Medinas, Atlasgipfel und Atlantikküste: private Reisen, gestaltet von Guides, die jeden Weg kennen.",
+      "cta": "Unsere Reiseziele entdecken",
+      "secondaryCta": "Meine Reise gestalten"
+    },
+    "search": {
+      "aria": "Schnellsuche",
+      "destination": "Reiseziel",
+      "allDestinations": "Alle Reiseziele",
+      "date": "Abreisedatum",
+      "travellers": "Reisende",
+      "travellersCount": "{count, plural, one {# Reisender} other {# Reisende}}",
+      "submit": "Suchen"
+    },
+    "popular": {
+      "eyebrow": "Unsere Favoriten",
+      "title": "Beliebte Reiseziele",
+      "viewAll": "Alle Reiseziele ansehen"
+    },
+    "why": {
+      "eyebrow": "Warum wir",
+      "title": "Entspannt reisen – mit Einheimischen",
+      "subtitle": "Wir sind hier geboren. Wir teilen unsere Lieblingsorte, unsere Kultur und unsere Gastfreundschaft.",
+      "items": {
+        "guides": {
+          "title": "Lokale Guides",
+          "text": "Offizielle Reiseleiter und erfahrene Fahrer, die aus den besuchten Regionen stammen."
+        },
+        "prices": {
+          "title": "Transparente Preise",
+          "text": "Ein klarer, online berechneter Preis – ohne versteckte Kosten oder Überraschungsprovisionen."
+        },
+        "support": {
+          "title": "24/7-Betreuung",
+          "text": "Ein Team, das während Ihrer Reise jederzeit per Telefon oder WhatsApp erreichbar ist."
+        },
+        "custom": {
+          "title": "Individuelle Reisen",
+          "text": "Jede Route passt sich Ihrem Tempo, Ihren Wünschen und Ihrem Budget an."
+        }
+      }
+    },
+    "reviews": {
+      "eyebrow": "Sie sind mit uns gereist",
+      "title": "Das sagen unsere Reisenden"
+    },
+    "cta": {
+      "title": "Fragen? Sprechen wir über Ihre Reise",
+      "subtitle": "Unser Team antwortet innerhalb weniger Minuten auf WhatsApp oder innerhalb von 24 Stunden per E-Mail.",
+      "whatsappMessage": "Hallo, ich möchte eine Reise nach Marokko planen.",
+      "whatsapp": "Auf WhatsApp schreiben",
+      "contact": "Kontakt aufnehmen"
+    }
+  },
+  "reviews": {
+    "carouselAria": "Bewertungen von Reisenden",
+    "ratingAria": "Bewertung: {rating} von 5",
+    "previous": "Vorherige Bewertungen",
+    "next": "Nächste Bewertungen"
+  },
+  "destinations": {
+    "metaTitle": "Reiseziele und Rundreisen in Marokko",
+    "metaDescription": "Marrakesch, Fès, Chefchaouen, Wüste Merzouga, Atlas, Essaouira … Vergleichen Sie unsere privaten Rundreisen und buchen Sie online.",
+    "eyebrow": "Unsere Rundreisen",
+    "title": "Reiseziele in Marokko",
+    "subtitle": "Filtern Sie nach Region, Reiseart, Dauer oder Budget und finden Sie die passende Reise.",
+    "results": "{count, plural, =0 {Keine Reise gefunden} one {# Reise gefunden} other {# Reisen gefunden}}",
+    "empty": {
+      "title": "Keine passende Reise",
+      "text": "Erweitern Sie Ihre Kriterien – oder lassen Sie uns eine Route nur für Sie gestalten.",
+      "reset": "Filter zurücksetzen",
+      "custom": "Individuelle Reise anfragen"
+    },
+    "pagination": {
+      "aria": "Seitennavigation",
+      "previous": "Zurück",
+      "next": "Weiter",
+      "status": "Seite {page} von {total}"
+    },
+    "filters": {
+      "aria": "Reiseziele filtern",
+      "title": "Filter",
+      "reset": "Zurücksetzen",
+      "search": "Reiseziel suchen",
+      "searchPlaceholder": "Suche: Sahara, Medina, Surfen …",
+      "region": "Region",
+      "type": "Reiseart",
+      "duration": "Dauer",
+      "budget": "Budget pro Erwachsenem",
+      "sort": "Sortieren nach",
+      "all": "Alle",
+      "durations": {
+        "1": "1 Tag",
+        "2-3": "2 bis 3 Tage",
+        "4+": "4 Tage oder mehr"
+      },
+      "budgets": {
+        "lt150": "Unter 150 €",
+        "150-250": "150 bis 250 €",
+        "gt250": "Über 250 €"
+      },
+      "sorts": {
+        "popularity": "Beliebtheit",
+        "price_asc": "Preis aufsteigend",
+        "price_desc": "Preis absteigend",
+        "rating": "Beste Bewertungen",
+        "duration": "Dauer"
+      }
+    }
+  },
+  "destination": {
+    "days": "{count, plural, one {# Tag} other {# Tage}}",
+    "ratingAria": "Durchschnittliche Bewertung {rating} von 5 ({count, plural, one {# Bewertung} other {# Bewertungen}})",
+    "reviewsCount": "{rating}/5 · {count, plural, one {# Bewertung} other {# Bewertungen}}",
+    "from": "Ab",
+    "perPerson": "pro Person",
+    "perAdult": "pro Erwachsenem",
+    "childPrice": "Kind (unter 12 Jahren): {price}",
+    "details": "Details",
+    "detailsAria": "Details ansehen: {title}",
+    "book": "Buchen",
+    "bookAria": "Buchen: {title}",
+    "breadcrumbAria": "Brotkrumennavigation",
+    "breadcrumbHome": "Startseite",
+    "breadcrumbDestinations": "Reiseziele",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hallo, ich interessiere mich für die Reise „{title}“.",
+    "askQuestion": "Frage stellen",
+    "pricesAria": "Preise und Buchung",
+    "facts": {
+      "duration": "Dauer",
+      "difficulty": "Niveau",
+      "bestPeriod": "Beste Reisezeit",
+      "region": "Region"
+    },
+    "sections": {
+      "about": "Die Reise",
+      "highlights": "Höhepunkte",
+      "itinerary": "Programm Tag für Tag",
+      "includedExcluded": "Inklusive und nicht inklusive",
+      "included": "Inklusive",
+      "excluded": "Nicht inklusive",
+      "bestPeriod": "Wann reisen?",
+      "map": "Auf der Karte",
+      "booking": "Diese Reise buchen",
+      "reviews": "Bewertungen von Reisenden",
+      "similar": "Das könnte Ihnen auch gefallen"
+    },
+    "day": "Tag {day}",
+    "recommended": "empfohlen",
+    "notRecommended": "weniger günstig",
+    "noReviews": "Noch keine Bewertungen. Teilen Sie als Erste oder Erster Ihre Erfahrung!",
+    "perks": {
+      "free": "Kostenlose, unverbindliche Anfrage",
+      "private": "100 % private Reise",
+      "support": "24/7-Betreuung während der Reise"
+    }
+  },
+  "gallery": {
+    "imageAlt": "{title} — Foto {index}",
+    "open": "Foto {index} von {total} vergrößern",
+    "viewAll": "Alle {count} Fotos ansehen",
+    "dialogAria": "Fotogalerie: {title}",
+    "counter": "{index} / {total}",
+    "close": "Galerie schließen",
+    "previous": "Vorheriges Foto",
+    "next": "Nächstes Foto"
+  },
+  "map": {
+    "caption": "Karte: {place}",
+    "open": "In OpenStreetMap öffnen"
+  },
+  "errors": {
+    "required": "Dieses Feld ist erforderlich.",
+    "invalid": "Ungültiger Wert.",
+    "invalid_email": "Ungültige E-Mail-Adresse.",
+    "invalid_phone": "Ungültige Telefonnummer (z. B. +49 170 1234567).",
+    "invalid_date": "Ungültiges Datum.",
+    "date_too_soon": "Bitte wählen Sie ein Datum ab morgen.",
+    "date_too_far": "Buchungen sind bis zu zwei Jahre im Voraus möglich.",
+    "min_adults": "Mindestens ein Erwachsener ist erforderlich.",
+    "max_travellers": "Für mehr als 30 Reisende kontaktieren Sie uns bitte direkt.",
+    "too_short": "Der Text ist zu kurz.",
+    "too_long": "Der Text ist zu lang.",
+    "terms_required": "Sie müssen die AGB akzeptieren.",
+    "choose_one": "Bitte wählen Sie mindestens eine Option.",
+    "not_found": "Diese Reise ist nicht mehr verfügbar."
+  },
+  "forms": {
+    "optional": "optional",
+    "honeypot": "Dieses Feld bitte nicht ausfüllen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "sending": "Wird gesendet …",
+    "alerts": {
+      "validation": "Einige Felder sind fehlerhaft. Bitte überprüfen Sie sie.",
+      "rate_limited": "Zu viele Anfragen. Bitte versuchen Sie es in einigen Minuten erneut.",
+      "captcha": "Die Anti-Bot-Prüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "server": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns auf WhatsApp."
+    }
+  },
+  "booking": {
+    "metaTitle": "Rundreise buchen",
+    "metaDescription": "Kostenlose, unverbindliche Buchungsanfrage: Wählen Sie Ihre Reise, Ihre Daten und Optionen. Antwort innerhalb von 24 Stunden.",
+    "eyebrow": "Buchung",
+    "title": "Buchen Sie Ihre Reise",
+    "subtitle": "Kostenlose, unverbindliche Anfrage: Unser Team bestätigt die Verfügbarkeit innerhalb von 24 Stunden.",
+    "stepsAria": "Buchungsschritte",
+    "stepCounter": "Schritt {step} von {total}",
+    "steps": {
+      "trip": "Ihre Reise",
+      "options": "Optionen",
+      "contact": "Ihre Daten",
+      "confirm": "Bestätigung"
+    },
+    "fields": {
+      "destination": "Rundreise",
+      "destinationPlaceholder": "Rundreise auswählen",
+      "daysShort": "{count, plural, one {# Tag} other {# Tage}}",
+      "startDate": "Abreisedatum",
+      "durationHint": "Reisedauer: {count, plural, one {# Tag} other {# Tage}}",
+      "adults": "Erwachsene",
+      "children": "Kinder (unter 12)",
+      "adultsDecrease": "Einen Erwachsenen entfernen",
+      "adultsIncrease": "Einen Erwachsenen hinzufügen",
+      "childrenDecrease": "Ein Kind entfernen",
+      "childrenIncrease": "Ein Kind hinzufügen",
+      "transport": "Privater Transport",
+      "transportHint": "Klimatisiertes Fahrzeug mit Fahrer — {price} pro Person",
+      "accommodation": "Unterkunft",
+      "privateGuide": "Privater Reiseleiter",
+      "privateGuideHint": "Eigener offizieller Reiseleiter — {price} pro Tag",
+      "guideLanguage": "Sprache des Reiseleiters",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "phoneHint": "Mit Ländervorwahl, am besten Ihre WhatsApp-Nummer.",
+      "country": "Wohnsitzland",
+      "countryPlaceholder": "Land auswählen",
+      "message": "Nachricht",
+      "messagePlaceholder": "Ernährungswünsche, besonderer Anlass, Fragen …",
+      "terms": "Ich akzeptiere die <terms>Allgemeinen Geschäftsbedingungen</terms> und die <privacy>Datenschutzerklärung</privacy>."
+    },
+    "accommodation": {
+      "none": "Ohne Unterkunft",
+      "standard": "Standard",
+      "superior": "Superior",
+      "luxury": "Luxus",
+      "noneHint": "Ich buche selbst",
+      "perNight": "{price} / Nacht / Erwachsener"
+    },
+    "summary": {
+      "reference": "Referenz",
+      "destination": "Rundreise",
+      "dates": "Reisedaten",
+      "dateRange": "vom {start} bis {end}",
+      "startDate": "Abreise",
+      "travellers": "Reisende",
+      "travellersValue": "{adults, plural, one {# Erwachsener} other {# Erwachsene}}{children, plural, =0 {} one {, # Kind} other {, # Kinder}}",
+      "total": "Geschätzter Gesamtpreis",
+      "contact": "Kontakt"
+    },
+    "submit": "Anfrage senden",
+    "priceAria": "Preisschätzung",
+    "price": {
+      "title": "Ihre Schätzung",
+      "base": "Rundreise ({adults, plural, one {# Erwachsener} other {# Erwachsene}}{children, plural, =0 {} one {, # Kind} other {, # Kinder}})",
+      "transport": "Privater Transport",
+      "accommodation": "Unterkunft ({nights, plural, one {# Nacht} other {# Nächte}})",
+      "guide": "Privater Reiseleiter",
+      "total": "Geschätzte Summe",
+      "note": "Unverbindlicher Preis, von der Agentur bestätigt. Jetzt ist keine Zahlung erforderlich.",
+      "empty": "Wählen Sie eine Rundreise, um den Preis zu sehen."
+    },
+    "success": {
+      "title": "Anfrage gesendet!",
+      "text": "Vielen Dank! Eine Zusammenfassung wurde an {email} gesendet. Unser Team meldet sich innerhalb von 24 Stunden, um Ihre Reise zu bestätigen.",
+      "note": "Bitte bewahren Sie Ihre Referenz für jeden Kontakt mit unserem Team auf.",
+      "whatsappMessage": "Hallo, ich habe gerade die Buchungsanfrage {reference} gesendet.",
+      "whatsapp": "Auf WhatsApp nachfragen",
+      "continue": "Weitere Reisen ansehen"
+    }
+  },
+  "contact": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Kontaktieren Sie unsere Agentur per Telefon, WhatsApp oder E-Mail. Antwort innerhalb von 24 Stunden.",
+    "eyebrow": "Kontakt",
+    "title": "Sprechen wir über Ihre Reise",
+    "subtitle": "Eine Frage, ein Projekt, ein besonderer Wunsch? Wir antworten innerhalb von 24 Stunden.",
+    "formTitle": "Kontaktformular",
+    "infoAria": "Kontaktdaten der Agentur",
+    "call": "Rufen Sie uns an",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hallo, ich habe eine Frage zu einer Reise nach Marokko.",
+    "email": "E-Mail",
+    "address": "Unsere Agentur",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "subject": "Betreff",
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "privacy": "Ihre Daten werden nur zur Beantwortung Ihrer Anfrage verwendet und niemals verkauft.",
+      "successTitle": "Nachricht gesendet!",
+      "successText": "Vielen Dank für Ihre Nachricht. Eine Eingangsbestätigung wurde Ihnen soeben per E-Mail gesendet.",
+      "another": "Weitere Nachricht senden"
+    }
+  },
+  "customTour": {
+    "metaTitle": "Individuelle Rundreisen in Marokko",
+    "metaDescription": "Beschreiben Sie Ihre Traumreise: Daten, Budget, Interessen. Ein lokaler Berater sendet Ihnen innerhalb von 48 Stunden eine persönliche Route.",
+    "eyebrow": "Individuell",
+    "title": "Ihr Marokko, ganz für Sie gestaltet",
+    "subtitle": "Teilen Sie uns Ihre Wünsche mit: Wir entwerfen eine private Route, passend zu Ihrem Tempo und Budget.",
+    "stepLabel": "Schritt {step}",
+    "steps": {
+      "share": {
+        "title": "Sie erzählen uns alles",
+        "text": "Reisedaten, Reisende, Budget und Interessen."
+      },
+      "design": {
+        "title": "Wir gestalten die Route",
+        "text": "Ein Berater schickt Ihnen innerhalb von 48 Stunden ein Angebot."
+      },
+      "enjoy": {
+        "title": "Sie genießen",
+        "text": "Gemeinsam feilen wir daran, bis alles perfekt ist."
+      }
+    },
+    "form": {
+      "tripSection": "Ihr Vorhaben",
+      "startDate": "Gewünschtes Abreisedatum",
+      "startDateHint": "Leer lassen, wenn Ihre Reisedaten flexibel sind.",
+      "duration": "Dauer (Tage)",
+      "adults": "Erwachsene",
+      "children": "Kinder",
+      "budget": "Budget pro Person ({currency})",
+      "budgets": {
+        "lt1000": "Unter 1.000",
+        "1000-2000": "1.000 bis 2.000",
+        "2000-4000": "2.000 bis 4.000",
+        "gt4000": "Über 4.000"
+      },
+      "accommodation": "Gewünschte Unterkunft",
+      "accommodations": {
+        "standard": "Standard (Riads und Boutique-Hotels)",
+        "superior": "Superior (4 Sterne)",
+        "luxury": "Luxus (5 Sterne, Paläste)"
+      },
+      "interests": "Ihre Interessen",
+      "interestOptions": {
+        "desert": "Wüste",
+        "imperial_city": "Königsstädte",
+        "beach": "Strände",
+        "mountain": "Berge",
+        "culture": "Kultur und Erbe",
+        "gastronomy": "Kulinarik",
+        "trekking": "Wandern",
+        "wellness": "Wellness und Hammam"
+      },
+      "contactSection": "Ihre Daten",
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "message": "Beschreiben Sie Ihre Traumreise",
+      "messagePlaceholder": "Wovon Sie träumen, Ihre Einschränkungen, der Anlass der Reise …",
+      "submit": "Mein Angebot erhalten",
+      "successTitle": "Anfrage erhalten!",
+      "successText": "Vielen Dank! Ein Berater bereitet Ihre Route vor und meldet sich innerhalb von 48 Stunden."
+    }
+  },
+  "faq": {
+    "metaTitle": "Häufige Fragen",
+    "metaDescription": "Buchung, Zahlung, Visum, beste Reisezeit, private Rundreisen: alle Antworten zur Vorbereitung Ihrer Marokko-Reise.",
+    "title": "Häufige Fragen",
+    "subtitle": "Alles, was Sie vor der Abreise wissen sollten.",
+    "categories": {
+      "booking": "Buchung",
+      "payment": "Zahlung und Stornierung",
+      "travel": "Reisevorbereitung",
+      "onsite": "Vor Ort"
+    },
+    "moreTitle": "Keine passende Antwort gefunden?",
+    "moreText": "Unser Team antwortet innerhalb weniger Minuten auf WhatsApp oder innerhalb von 24 Stunden per E-Mail.",
+    "contactCta": "Kontakt aufnehmen"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "text": "Diese Seite hat sich in den Dünen verirrt … Sie wurde möglicherweise verschoben oder existiert nicht mehr.",
+    "home": "Zur Startseite",
+    "destinations": "Reiseziele ansehen"
+  },
+  "errorPage": {
+    "title": "Ein Fehler ist aufgetreten",
+    "text": "Diese Seite konnte nicht angezeigt werden. Bitte versuchen Sie es gleich noch einmal.",
+    "retry": "Erneut versuchen",
+    "home": "Zur Startseite"
+  }
+}

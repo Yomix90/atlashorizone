@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+
+/* Palette inspirée du Maroc : terracotta, bleu Majorelle, sable doré, blanc cassé. */
+@theme {
+  --color-terracotta-50: #fdf3ee;
+  --color-terracotta-100: #f9e0d3;
+  --color-terracotta-200: #f2bfa5;
+  --color-terracotta-300: #e8966f;
+  --color-terracotta-400: #db6f45;
+  --color-terracotta-500: #c2552d;
+  --color-terracotta-600: #a8441f;
+  --color-terracotta-700: #87361a;
+  --color-terracotta-800: #6b2c18;
+  --color-terracotta-900: #4f2214;
+
+  --color-majorelle-50: #eef1fc;
+  --color-majorelle-100: #d9e0f8;
+  --color-majorelle-200: #b3c1f0;
+  --color-majorelle-300: #7f97e3;
+  --color-majorelle-400: #4f6bd1;
+  --color-majorelle-500: #3352c4;
+  --color-majorelle-600: #2741a8;
+  --color-majorelle-700: #203588;
+  --color-majorelle-800: #1c2d6c;
+  --color-majorelle-900: #172352;
+
+  --color-sand-50: #fdf9f1;
+  --color-sand-100: #f8eedb;
+  --color-sand-200: #f0dcb5;
+  --color-sand-300: #e8c98a;
+  --color-sand-400: #d9ad5c;
+  --color-sand-500: #c4923a;
+
+  --color-cream: #fbf7f0;
+  --color-ink: #2b2522;
+  --color-ink-soft: #5c524b;
+
+  --shadow-card: 0 1px 2px rgb(43 37 34 / 0.06), 0 8px 24px -12px rgb(43 37 34 / 0.18);
+  --radius-card: 1.25rem;
+}
+
+/* Polices fournies par next/font ; l'arabe bascule automatiquement sur Cairo. */
+@theme inline {
+  --font-sans: var(--font-body-stack);
+  --font-display: var(--font-display-stack);
+}
+
+:root {
+  --font-body-stack: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display-stack: var(--font-playfair), Georgia, serif;
+}
+
+:root[dir='rtl'] {
+  --font-body-stack: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+  --font-display-stack: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Focus visible et contrasté pour la navigation clavier. */
+:focus-visible {
+  outline: 3px solid var(--color-majorelle-500);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Contenu riche (blocs Strapi). */
+.prose-content {
+  line-height: 1.75;
+  color: var(--color-ink-soft);
+}
+.prose-content > * + * {
+  margin-top: 1rem;
+}
+.prose-content h2,
+.prose-content h3,
+.prose-content h4 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.prose-content h2 {
+  font-size: 1.5rem;
+}
+.prose-content h3 {
+  font-size: 1.25rem;
+}
+.prose-content blockquote {
+  border-inline-start: 4px solid var(--color-terracotta-400);
+  padding-inline-start: 1rem;
+  font-style: italic;
+}
+.prose-content pre {
+  overflow-x: auto;
+  background: var(--color-sand-100);
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+/* Motif zellige discret pour les sections décoratives. */
+.bg-zellige {
+  background-color: var(--color-majorelle-700);
+  background-image:
+    radial-gradient(circle at 25% 25%, rgb(255 255 255 / 0.08) 2px, transparent 2.5px),
+    radial-gradient(circle at 75% 75%, rgb(232 201 138 / 0.18) 2px, transparent 2.5px);
+  background-size: 28px 28px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Leaflet : garder la carte sous l'en-tête collant. */
+.leaflet-container {
+  z-index: 0;
+  font-family: var(--font-sans);
+}

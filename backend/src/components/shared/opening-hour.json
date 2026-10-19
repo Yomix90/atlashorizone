@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_opening_hours",
+  "info": {
+    "displayName": "Horaires d'ouverture",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "hours": {
+      "type": "string"
+    },
+    "closed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

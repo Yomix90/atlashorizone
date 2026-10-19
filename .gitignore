@@ -1,0 +1,31 @@
+# Dépendances
+node_modules/
+
+# Environnements
+.env
+.env.*
+!.env.example
+
+# Builds
+backend/dist/
+backend/build/
+backend/.strapi/
+backend/.cache/
+backend/.tmp/
+frontend/.next/
+frontend/out/
+*.tsbuildinfo
+
+# Médias uploadés (servis depuis le volume Docker)
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep
+
+# Sauvegardes
+backups/
+
+# Divers
+.DS_Store
+Thumbs.db
+*.log
+coverage/
+backend/.strapi-updater.json

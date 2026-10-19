@@ -1,0 +1,19 @@
+# Développement local : uniquement PostgreSQL (Strapi et Next.js tournent avec npm run develop / dev).
+#   docker compose -f docker-compose.dev.yml up -d
+# Puis dans backend/.env : DATABASE_CLIENT=postgres, DATABASE_HOST=localhost, identifiants ci-dessous.
+name: atlas-horizons-dev
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - pgdata-dev:/var/lib/postgresql/data
+
+volumes:
+  pgdata-dev:
