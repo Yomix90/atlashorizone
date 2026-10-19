@@ -6,19 +6,22 @@
 #   service frontend → SITE_DOMAIN  (port 3000, HTTPS Let's Encrypt)
 #   service strapi   → CMS_DOMAIN   (port 1337, HTTPS Let's Encrypt)
 # Voir README, section « Déploiement avec Dokploy ».
+#
+# Les variables marquées « :? » sont obligatoires : sans elles, Dokploy affiche une erreur explicite
+# avant le build. Les domaines s'écrivent SANS https:// (ex. SITE_DOMAIN=atlashorizon.ma).
 
 services:
   postgres:
     image: postgres:17-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:?manquant, renseignez Environment dans Dokploy}
+      POSTGRES_USER: ${POSTGRES_USER:?manquant, renseignez Environment dans Dokploy}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?manquant, renseignez Environment dans Dokploy}
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}']
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER:?manquant, renseignez Environment dans Dokploy} -d ${POSTGRES_DB:?manquant, renseignez Environment dans Dokploy}']
       interval: 10s
       timeout: 5s
       retries: 10
@@ -28,7 +31,7 @@ services:
     build:
       context: ./backend
       args:
-        PUBLIC_URL: https://${CMS_DOMAIN}
+        PUBLIC_URL: https://${CMS_DOMAIN:?manquant, renseignez Environment dans Dokploy}
     restart: unless-stopped
     depends_on:
       postgres:
@@ -37,33 +40,33 @@ services:
       NODE_ENV: production
       HOST: 0.0.0.0
       PORT: 1337
-      PUBLIC_URL: https://${CMS_DOMAIN}
+      PUBLIC_URL: https://${CMS_DOMAIN:?manquant, renseignez Environment dans Dokploy}
       IS_PROXIED: 'true'
-      APP_KEYS: ${APP_KEYS}
-      API_TOKEN_SALT: ${API_TOKEN_SALT}
-      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
-      TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT}
-      JWT_SECRET: ${JWT_SECRET}
-      ENCRYPTION_KEY: ${ENCRYPTION_KEY}
-      FRONTEND_API_TOKEN: ${FRONTEND_API_TOKEN}
+      APP_KEYS: ${APP_KEYS:?manquant, renseignez Environment dans Dokploy}
+      API_TOKEN_SALT: ${API_TOKEN_SALT:?manquant, renseignez Environment dans Dokploy}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET:?manquant, renseignez Environment dans Dokploy}
+      TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT:?manquant, renseignez Environment dans Dokploy}
+      JWT_SECRET: ${JWT_SECRET:?manquant, renseignez Environment dans Dokploy}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY:?manquant, renseignez Environment dans Dokploy}
+      FRONTEND_API_TOKEN: ${FRONTEND_API_TOKEN:?manquant, renseignez Environment dans Dokploy}
       DATABASE_CLIENT: postgres
       DATABASE_HOST: postgres
       DATABASE_PORT: 5432
-      DATABASE_NAME: ${POSTGRES_DB}
-      DATABASE_USERNAME: ${POSTGRES_USER}
-      DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
+      DATABASE_NAME: ${POSTGRES_DB:?manquant, renseignez Environment dans Dokploy}
+      DATABASE_USERNAME: ${POSTGRES_USER:?manquant, renseignez Environment dans Dokploy}
+      DATABASE_PASSWORD: ${POSTGRES_PASSWORD:?manquant, renseignez Environment dans Dokploy}
       DATABASE_SSL: 'false'
-      CORS_ORIGINS: https://${SITE_DOMAIN},https://www.${SITE_DOMAIN},https://${CMS_DOMAIN}
+      CORS_ORIGINS: https://${SITE_DOMAIN:?manquant, renseignez Environment dans Dokploy},https://www.${SITE_DOMAIN:?manquant, renseignez Environment dans Dokploy},https://${CMS_DOMAIN:?manquant, renseignez Environment dans Dokploy}
       CSP_MEDIA_SOURCES: ${CSP_MEDIA_SOURCES:-}
       FRONTEND_URL: http://frontend:3000
-      REVALIDATE_SECRET: ${REVALIDATE_SECRET}
-      SMTP_HOST: ${SMTP_HOST}
+      REVALIDATE_SECRET: ${REVALIDATE_SECRET:?manquant, renseignez Environment dans Dokploy}
+      SMTP_HOST: ${SMTP_HOST:-localhost}
       SMTP_PORT: ${SMTP_PORT:-587}
       SMTP_SECURE: ${SMTP_SECURE:-false}
       SMTP_USERNAME: ${SMTP_USERNAME:-}
       SMTP_PASSWORD: ${SMTP_PASSWORD:-}
-      EMAIL_FROM: ${EMAIL_FROM}
-      EMAIL_REPLY_TO: ${EMAIL_REPLY_TO}
+      EMAIL_FROM: ${EMAIL_FROM:-no-reply@localhost}
+      EMAIL_REPLY_TO: ${EMAIL_REPLY_TO:-}
       AGENCY_EMAIL_LOCALE: ${AGENCY_EMAIL_LOCALE:-fr}
       RESERVATION_PREFIX: ${RESERVATION_PREFIX:-AHV}
       UPLOAD_PROVIDER: ${UPLOAD_PROVIDER:-local}
@@ -89,15 +92,15 @@ services:
     build:
       context: ./frontend
       args:
-        NEXT_PUBLIC_SITE_URL: https://${SITE_DOMAIN}
-        NEXT_PUBLIC_MEDIA_URL: https://${CMS_DOMAIN}
+        NEXT_PUBLIC_SITE_URL: https://${SITE_DOMAIN:?manquant, renseignez Environment dans Dokploy}
+        NEXT_PUBLIC_MEDIA_URL: https://${CMS_DOMAIN:?manquant, renseignez Environment dans Dokploy}
         NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${TURNSTILE_SITE_KEY:-}
         NEXT_PUBLIC_GA_ID: ${GA_ID:-}
         EXTRA_IMAGE_HOSTS: ${EXTRA_IMAGE_HOSTS:-}
         # Pendant le build, Strapi est lu via son URL publique (contenus publiés en lecture seule).
         # Au tout premier déploiement il n'existe pas encore : le conteneur invalide alors le cache
         # au démarrage (docker-entrypoint.sh) dès que Strapi répond.
-        STRAPI_API_URL: https://${CMS_DOMAIN}
+        STRAPI_API_URL: https://${CMS_DOMAIN:?manquant, renseignez Environment dans Dokploy}
     restart: unless-stopped
     depends_on:
       strapi:
@@ -105,8 +108,8 @@ services:
     environment:
       NODE_ENV: production
       STRAPI_API_URL: http://strapi:1337
-      STRAPI_API_TOKEN: ${FRONTEND_API_TOKEN}
-      REVALIDATE_SECRET: ${REVALIDATE_SECRET}
+      STRAPI_API_TOKEN: ${FRONTEND_API_TOKEN:?manquant, renseignez Environment dans Dokploy}
+      REVALIDATE_SECRET: ${REVALIDATE_SECRET:?manquant, renseignez Environment dans Dokploy}
       TURNSTILE_SECRET_KEY: ${TURNSTILE_SECRET_KEY:-}
     expose:
       - '3000'

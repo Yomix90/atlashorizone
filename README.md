@@ -262,6 +262,10 @@ Certbot) au lieu de `docker-compose.yml`.
    remplissez-le. Générez chaque secret avec `openssl rand -hex 32` (pour `APP_KEYS`, quatre valeurs séparées
    par des virgules). Dokploy écrit ces valeurs dans un `.env` à côté du compose. Le fichier les transmet
    explicitement à chaque service.
+   **Les domaines s'écrivent sans `https://`** (`SITE_DOMAIN=atlashorizon.ma`, `CMS_DOMAIN=cms.atlashorizon.ma`).
+   Si une variable obligatoire manque, le déploiement s'arrête avant le build avec le message
+   « *VARIABLE* manquant, renseignez Environment dans Dokploy ». Cliquez bien sur **Save** dans l'onglet
+   *Environment* avant de lancer *Deploy*.
 4. **Domains** (onglet *Domains → Add Domain*) :
 
    | Service | Host | Port | HTTPS |

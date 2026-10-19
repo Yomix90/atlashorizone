@@ -4,7 +4,19 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const mediaUrl = new URL(process.env.NEXT_PUBLIC_MEDIA_URL || 'http://localhost:1337');
+function parseMediaUrl(raw: string | undefined): URL {
+  const value = raw?.trim() || 'http://localhost:1337';
+  try {
+    const url = new URL(value);
+    if (!url.hostname) throw new Error('hostname vide');
+    return url;
+  } catch {
+    throw new Error(
+      `NEXT_PUBLIC_MEDIA_URL invalide (« ${value} »). En Docker/Dokploy, renseignez CMS_DOMAIN sans https:// (ex. cms.atlashorizon.ma).`
+    );
+  }
+}
+const mediaUrl = parseMediaUrl(process.env.NEXT_PUBLIC_MEDIA_URL);
 const gaEnabled = Boolean(process.env.NEXT_PUBLIC_GA_ID);
 // Domaines d'images supplémentaires (Cloudinary, S3/CDN…), ex. EXTRA_IMAGE_HOSTS=res.cloudinary.com,cdn.example.com
 const extraImageHosts = (process.env.EXTRA_IMAGE_HOSTS || '')
