@@ -32,7 +32,9 @@ ENV NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL} \
 
 # Le token Strapi est fourni comme secret BuildKit (facultatif : les contenus publiés sont aussi
 # lisibles sans token) ; il n'est jamais écrit dans une couche de l'image.
-RUN --mount=type=secret,id=strapi_api_token,env=STRAPI_API_TOKEN npm run build
+ARG BUILD_MEMORY_MB=2048
+RUN --mount=type=secret,id=strapi_api_token,env=STRAPI_API_TOKEN \
+  NODE_OPTIONS="--max-old-space-size=${BUILD_MEMORY_MB}" npm run build
 
 # ─── Image d'exécution ────────────────────────────────────
 FROM node:22-alpine AS run

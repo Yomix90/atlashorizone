@@ -14,7 +14,11 @@ RUN npm ci --include=dev --no-audit --no-fund
 COPY . .
 ARG PUBLIC_URL=http://localhost:1337
 ENV PUBLIC_URL=${PUBLIC_URL}
-RUN npm run build && npm prune --omit=dev --no-audit --no-fund
+# Le build du panneau d'administration (Vite) est gourmand : sur un petit VPS, prévoir du swap
+# (voir README › Dépannage). La limite évite que Node dépasse la RAM et que le build soit tué sans message.
+ARG BUILD_MEMORY_MB=2048
+RUN NODE_OPTIONS="--max-old-space-size=${BUILD_MEMORY_MB}" npm run build \
+  && npm prune --omit=dev --no-audit --no-fund
 
 # ─── Image d'exécution ────────────────────────────────────
 FROM node:22-alpine AS run

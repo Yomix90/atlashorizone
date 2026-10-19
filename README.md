@@ -446,4 +446,15 @@ n'étant pas disponible pour les comptes marocains, l'architecture prévoit **CM
 | Contenu modifié non visible | Vérifier `FRONTEND_URL` et `REVALIDATE_SECRET` identiques des deux côtés ; logs `[revalidate]` de Strapi |
 | `429 Too Many Requests` | Limitation de débit Nginx / Next.js ; ajuster `limit_req_zone` dans le modèle Nginx |
 | Nginx ne démarre pas | Certificat absent : lancer `init-letsencrypt.sh` ; vérifier le DNS |
+| Build bloqué sur « Building admin panel » (ou interrompu sans message) | Manque de RAM : le build Strapi et celui de Next.js tournent en parallèle et demandent ~3 Go. Vérifier avec `free -h` et `dmesg \| grep -i kill`, ajouter 4 Go de swap (voir ci-dessous) et `COMPOSE_PARALLEL_LIMIT=1` dans l'onglet Environment de Dokploy pour construire les images une par une |
 | Erreur de build Strapi sous npm 11 | Autoriser les scripts natifs : `npm install-scripts approve esbuild @swc/core better-sqlite3` |
+
+### Ajouter du swap sur le VPS (petits serveurs, 2 à 4 Go de RAM)
+
+```bash
+sudo fallocate -l 4G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile
+```
+
+```bash
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+```
