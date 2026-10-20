@@ -95,6 +95,24 @@ Navigateur ──HTTPS──▶ Nginx ──▶ Next.js (site public, SSR/ISR)  
 
 Prérequis : **Node.js 20 à 24**, npm. PostgreSQL facultatif en local (SQLite fonctionne).
 
+### Démarrage rapide sous Windows
+
+Double-cliquez sur **`demarrer.bat`** à la racine du projet. Le script :
+1. installe les dépendances au premier lancement ;
+2. crée `backend/.env` (secrets aléatoires, base SQLite) et `frontend/.env.local` (token synchronisé),
+   via `scripts/setup-local.mjs` ;
+3. charge les 12 destinations de démonstration au premier lancement ;
+4. ouvre Strapi et le site dans deux fenêtres (« Atlas - Strapi », « Atlas - Site »), attend qu'ils
+   répondent puis ouvre http://localhost:3000/fr et http://localhost:1337/admin.
+
+Au premier lancement, créez votre compte administrateur dans la page d'admin qui s'ouvre.
+Pour tout arrêter : **`arreter.bat`** (ou fermez les deux fenêtres).
+
+Sous macOS / Linux, `node scripts/setup-local.mjs` prépare les mêmes fichiers ; lancez ensuite
+`npm run dev:backend` et `npm run dev:frontend`.
+
+### Installation manuelle
+
 ```bash
 npm run install:all
 ```
